@@ -35,7 +35,12 @@ function loadProfileImg(){
 
 var tctx;
 var pctx;
+var data;
 function mapProfileOnText(){
     tctx = textCanvas.getContext('2d');
     pctx = profileCanvas.getContext('2d');
+
+    var imageData = tctx.getImageData(0, 0, textCanvas.width, textCanvas.height);
+    data = imageData.data;
+
 }
