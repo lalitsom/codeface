@@ -3,26 +3,46 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="style.css" media="screen" title="no title">
     <title>Create your own Codeface</title>
   </head>
   <body>
-
-
-
     <center>
+
       <div class="head-wrapper col-sm-7">
         <h1>CODEFACE</h1>
-        <input type="search" class="form-group form-control" id="profile-url-input" placeholder="paste url of your profile pic" autofocus>
-        <input type="search" class="form-group form-control" id="text-url-input" placeholder="paste url of text pic" >
-        <input type="button" value="Create Codeface" class="btn btn-primary">
+        <input type="search" class="form-group form-control" id="profile-url-input" placeholder="paste url of your profile pic"
+        value="https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAz8AAAAJGVlMDM0YjU0LTBlNGEtNDA2Mi05YmVlLWJlNmNlZTA0ZjllYQ.jpg" autofocus>
+
+        <input type="search" class="form-group form-control" id="text-url-input" placeholder="paste url of text pic"
+        value ="http://gouigoux.com/blog/wp-content/uploads/2012/06/image7.png" >
+
+        <input type="button" value="Create Codeface" class="btn btn-primary" onclick="createTextface()">
       </div>
+
+      <div class="output-wrapper">
+
+        <canvas id="textCanvas" width="700" height="700" class="">
+
+        </canvas>
+
+      </div>
+
+      <div class="output-wrapper">
+
+        <canvas id="profileCanvas" width="700" height="700" class="">
+
+        </canvas>
+
+      </div>
+
     </center>
 
 
-
+    <script src="script.js" charset="utf-8"></script>
   </body>
 </html>
