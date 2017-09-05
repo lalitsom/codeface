@@ -1,6 +1,14 @@
 var ok ='';
 var textCanvas = document.getElementById('textCanvas');
 var profileCanvas = document.getElementById('profileCanvas');
+var textTextarea = document.getElementById('text-textarea');
+var fontSize ="900 10px";
+var offsetY = 10;
+
+
+var imgtmp = "https://avatars2.githubusercontent.com/u/1305617?v=4&s=460";
+textTextarea.innerHTML = 'UNCOMFORTABLE SILENCES';
+
 
 function createTextface(){
   loadTextImg();
@@ -11,15 +19,32 @@ function createTextface(){
 
 function loadTextImg(){
     var img = new Image();
-    img.src = document.getElementById('text-url-input').value
     var ctx = textCanvas.getContext('2d');
     ctx.clearRect(0, 0, textCanvas.width, textCanvas.height);
-    img.onload = function() {
-      ctx.drawImage(img, 0, 0);
-      img.style.display = 'none';
-      loadProfileImg();
-    };
+    ctx.fillStyle = "red";
+    if(textTextarea.value.length < 4){
+      img.src = document.getElementById('text-url-input').value
+      img.onload = function() {
+        ctx.drawImage(img, 0, 0);
+        img.style.display = 'none';
+        loadProfileImg();
 
+      }
+    }else{
+      ctx.font=fontSize + " Arial";
+      var textArray = textTextarea.value.match(/.{1,126}/g);;
+      var lines =70;
+      var i = 0;
+      for(let line of textArray){
+        ctx.fillText(line,50,30 + i*offsetY);
+        i++;
+      }
+
+
+
+
+      loadProfileImg();
+    }
 }
 
 
@@ -50,7 +75,7 @@ function mapProfileOnText(){
     profileData = profileImageData.data; //rgba data of image
 
 
-    var index = 100*100;
+    var index = 0;
 
     var textBg = {
 		r: textData[0],
@@ -70,7 +95,7 @@ function mapProfileOnText(){
     g: 89
   };
 
-  console.log(textBg,profileBg,profilefg)
+  // console.log(textBg,profileBg,profilefg)
 
     while(index<textData.length){
       if( !(pixelDiff(textData[index],textBg.r) && pixelDiff(textData[index+1],textBg.b) && pixelDiff(textData[index+2],textBg.g)) )

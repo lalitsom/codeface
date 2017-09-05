@@ -19,11 +19,12 @@
       <h1>CODEFACE</h1>
 
 
+
       <div class="form-group">
         <label for="profile-url-input">Select profile:</label>
         <select class="form-control" id="profile-url-input">
-    <option>img/codeface.jpg</option>
     <option>img/amber.png</option>
+    <option>img/codeface.jpg</option>
     <option>img/megan.png</option>
     <option>img/pulpimage.jpg</option>
     <option>img/pulpmia.png</option>
@@ -35,10 +36,10 @@
       </select>
       </div>
 
-      <div class="form-group">
+      <div class="form-group text-image-input">
         <label for="text-url-input">Select text Image:</label>
         <select class="form-control" id="text-url-input">
-          <option>img/matrix.png</option>
+          <option>img/matrix.png</option>          
           <option>img/binarytext.png</option>
           <option>img/randomtext.png</option>
           <option>img/pulptext.jpg</option>
@@ -50,6 +51,12 @@
           <option>img/pulpmia.png</option>
       </select>
       </div>
+
+      <div class="form-group text-image-textarea">
+        <textarea id="text-textarea" name="text-image" rows="8" cols="100" placeholder="Enter Code/Text for background...."></textarea>
+
+      </div>
+
 
 
 
@@ -76,9 +83,9 @@
 
 
   <script src="script.js" charset="utf-8"></script>
-  <script type="text/javascript">
-    createTextface();
-  </script>
+<script type="text/javascript">
+  createTextface();
+</script>
 </body>
 
 </html>
