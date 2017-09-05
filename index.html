@@ -1,48 +1,84 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
   <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="style.css" media="screen" title="no title">
-    <title>Create your own Codeface</title>
-  </head>
-  <body>
-    <center>
+  <link rel="stylesheet" href="style.css" media="screen" title="no title">
+  <title>Create your own Codeface</title>
+</head>
 
-      <div class="head-wrapper col-sm-7">
-        <h1>CODEFACE</h1>
-        <input type="search" class="form-group form-control" id="profile-url-input" placeholder="paste url of your profile pic"
-        value="img/amber.png" autofocus>
+<body>
+  <center>
 
-        <input type="search" class="form-group form-control" id="text-url-input" placeholder="paste url of text pic"
-        value ="img/pulptext.jpg" >
+    <div class="head-wrapper col-sm-7">
+      <h1>CODEFACE</h1>
 
-        <input type="button" value="Create Codeface" class="btn btn-primary" onclick="createTextface()">
+
+      <div class="form-group">
+        <label for="profile-url-input">Select profile:</label>
+        <select class="form-control" id="profile-url-input">
+    <option>img/codeface.jpg</option>
+    <option>img/amber.png</option>
+    <option>img/megan.png</option>
+    <option>img/pulpimage.jpg</option>
+    <option>img/pulpmia.png</option>
+    <option>img/binarytext.png</option>
+    <option>img/randomtext.png</option>
+    <option>img/pulptext.jpg</option>
+    <option>img/script.png</option>
+    <option>img/matrix.png</option>
+      </select>
       </div>
 
-      <div class="output-wrapper">
+      <div class="form-group">
+        <label for="text-url-input">Select text Image:</label>
+        <select class="form-control" id="text-url-input">
+          <option>img/matrix.png</option>
+          <option>img/binarytext.png</option>
+          <option>img/randomtext.png</option>
+          <option>img/pulptext.jpg</option>
+          <option>img/script.png</option>
+          <option>img/amber.png</option>
+          <option>img/megan.png</option>
+          <option>img/pulpimage.jpg</option>
+          <option>img/codeface.jpg</option>
+          <option>img/pulpmia.png</option>
+      </select>
+      </div>
 
-        <canvas id="textCanvas" width="1100" height="1100" class="">
+
+
+      <input type="button" value="Create Codeface" class="btn btn-primary" onclick="createTextface()">
+    </div>
+
+    <div class="output-wrapper">
+
+      <canvas id="textCanvas" width="1100" height="1100" class="">
 
         </canvas>
 
-      </div>
+    </div>
 
-      <div class="output-wrapper">
+    <div class="output-wrapper">
 
-        <canvas id="profileCanvas" width="1100" height="1100" class="">
+      <canvas id="profileCanvas" width="1100" height="1100" class="">
 
         </canvas>
 
-      </div>
+    </div>
 
-    </center>
+  </center>
 
 
-    <script src="script.js" charset="utf-8"></script>
-  </body>
+  <script src="script.js" charset="utf-8"></script>
+  <script type="text/javascript">
+    createTextface();
+  </script>
+</body>
+
 </html>
