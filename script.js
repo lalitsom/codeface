@@ -16,6 +16,11 @@ var fontWeight ="900 ";
 
 
 
+// loadspinner
+
+var spinner = document.getElementById('loadSpinner')
+
+
 // on value change of sliders
 function repaint(){
   createTextface();
@@ -25,6 +30,7 @@ function repaint(){
 // functions
 
 function createTextface(){
+  spinner.style.display = "block";
   loadTextImg();
 }
 
@@ -72,6 +78,7 @@ function loadProfileImg(){
       ctx.drawImage(img, 0, 0);
       img.style.display = 'none';
       mapProfileOnText();
+      spinner.style.display = "none";
     };
 }
 

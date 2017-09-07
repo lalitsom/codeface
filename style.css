@@ -1,13 +1,26 @@
-.head-wrapper{
+#loadSpinner{
+  height: 30px;
+  width: 30px;
+  border-width: 5px;
+  border-color: white;
+  border-radius: 100%;
+  border-style: solid;
+  float: right;
+  border-top: thick solid  green;
+  -webkit-animation: spin 1s infinite linear;
+  display: none;
 
 }
+
+@keyframes spin {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
+}
+
+
 
 .output-wrapper{
   margin-top: 50px;
-}
-
-.text-image-input{
-
 }
 
 .slidecontainer {
