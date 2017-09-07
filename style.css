@@ -8,8 +8,7 @@
   float: right;
   border-top: thick solid  green;
   -webkit-animation: spin 1s infinite linear;
-  display: none;
-
+  visibility: hidden;
 }
 
 @keyframes spin {

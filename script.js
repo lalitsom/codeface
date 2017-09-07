@@ -30,7 +30,7 @@ function repaint(){
 // functions
 
 function createTextface(){
-  spinner.style.display = "block";
+  spinner.style.visibility = "visible"
   loadTextImg();
 }
 
@@ -78,7 +78,7 @@ function loadProfileImg(){
       ctx.drawImage(img, 0, 0);
       img.style.display = 'none';
       mapProfileOnText();
-      spinner.style.display = "none";
+      spinner.style.visibility = "hidden"
     };
 }
 
