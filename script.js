@@ -1,19 +1,31 @@
-var ok ='';
+// Canvas
 var textCanvas = document.getElementById('textCanvas');
 var profileCanvas = document.getElementById('profileCanvas');
+
+
+// sliders
+var textSize = document.getElementById('textSizeSlider')
+var textGap = document.getElementById('textGapSlider')
+var textWidth = document.getElementById('textWidthSlider')
+
+
+
+// textarea variables
 var textTextarea = document.getElementById('text-textarea');
-var fontSize ="900 10px";
-var offsetY = 10;
+var fontWeight ="900 ";
 
 
-var imgtmp = "https://avatars2.githubusercontent.com/u/1305617?v=4&s=460";
-textTextarea.innerHTML = 'UNCOMFORTABLE SILENCES';
 
+// on value change of sliders
+function repaint(){
+  createTextface();
+}
+
+
+// functions
 
 function createTextface(){
   loadTextImg();
-
-  // showImage();
 }
 
 
@@ -31,12 +43,15 @@ function loadTextImg(){
 
       }
     }else{
-      ctx.font=fontSize + " Arial";
-      var textArray = textTextarea.value.match(/.{1,126}/g);;
-      var lines =70;
-      var i = 0;
+      ctx.font=fontWeight + textSize.value + "px Arial";
+
+      var regexString = ".{1,"+ textWidth.value +"}";
+      var regExp = new RegExp(regexString, "g");
+      var textArray = textTextarea.value.match(regExp);
+
+      let i = 0;
       for(let line of textArray){
-        ctx.fillText(line,50,30 + i*offsetY);
+        ctx.fillText(line,50,100 + i*textGap.value);
         i++;
       }
 

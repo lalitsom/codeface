@@ -39,7 +39,7 @@
       <div class="form-group text-image-input">
         <label for="text-url-input">Select text Image:</label>
         <select class="form-control" id="text-url-input">
-          <option>img/matrix.png</option>          
+          <option>img/matrix.png</option>
           <option>img/binarytext.png</option>
           <option>img/randomtext.png</option>
           <option>img/pulptext.jpg</option>
@@ -52,8 +52,27 @@
       </select>
       </div>
 
+        OR
+
       <div class="form-group text-image-textarea">
         <textarea id="text-textarea" name="text-image" rows="8" cols="100" placeholder="Enter Code/Text for background...."></textarea>
+
+
+        <div class="slidecontainer">
+          <label for="textSizeSlider">Text Font Size : <span id="textSizeOutput">50</span></label>
+          <input type="range" min="1" max="100" value="50" class="slider" id="textSizeSlider" oninput="repaint()">
+        </div>
+
+        <div class="slidecontainer">
+          <label for="textGapSlider">Line Gaps : <span id="TextGapOutput">50</span></label>
+          <input type="range" min="1" max="100" value="50" class="slider" id="textGapSlider"  oninput="repaint()">
+        </div>
+
+        <div class="slidecontainer">
+          <label for="textWidthSlider">Text Wrap width : <span id="textWidthOutput">50</span></label>
+          <input type="range" min="1" max="100" value="50" class="slider" id="textWidthSlider" oninput="repaint()">
+        </div>
+
 
       </div>
 
