@@ -4,6 +4,7 @@ Convert your profile pic in an awesome code collage. "Don't know what it means? 
 # DEMOS
 
 Amber heard :heart:
+
 ![Alt text](/img/amber.png?raw=true "Amber Heard")
 
 Matrix 
@@ -12,7 +13,7 @@ Matrix
 
 Codeface
 
-![Alt text](/demos/amber-matrix.jpg?raw=true "mix")
+![Alt text](/demos/amber-matrix.JPG?raw=true "mix")
 
 
 
